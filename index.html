@@ -21,23 +21,22 @@
             transition: background 0.5s ease;
         }
 
-        /* Global container for sections */
         .container {
             width: 80%;
             margin: 0 auto;
             max-width: 1200px;
         }
 
-        /* Header Section */
         header {
-            background-image: url('header-background.jpg'); /* Add a background image */
+            background-image: url('header-background.jpg');
             background-size: cover;
-            color: #093b7c;
+            color: #2453ee73;
             padding: 100px 0;
             text-align: center;
             position: relative;
             margin-bottom: 60px;
-            border-bottom: 5px solid rgb(42, 93, 141);
+            border-bottom: 5px solid #ff7f50;
+            background-blur: 10px;
         }
 
         header h1 {
@@ -47,6 +46,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             animation: fadeIn 1s ease-in-out;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         header p {
@@ -54,20 +54,20 @@
             letter-spacing: 1px;
             margin-top: 10px;
             font-weight: 300;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
         }
 
-        /* Profile Section with Background Image */
         #profile {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-top: -120px;
             margin-bottom: 50px;
-            background-image: url('images.jpg'); /* Add your background image here */
+            background-image: url('images.jpg');
             background-size: cover;
             background-position: center;
-            padding: 100px 0; /* Adjust padding for space */
-            border-radius: 10px; /* Optional: For rounded corners */
+            padding: 100px 0;
+            border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
@@ -84,14 +84,14 @@
         }
 
         .profile-image img {
-            width: 100%; /* Responsive profile image */
+            width: 100%;
             height: auto;
             border-radius: 50%;
         }
 
         .profile-info {
             max-width: 600px;
-            background-color: rgba(0, 0, 0, 0.6); /* To make text readable over the image */
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
         }
@@ -99,19 +99,22 @@
         .profile-info h2 {
             font-size: 2.5em;
             margin-bottom: 10px;
+            color: #ff7f50;
         }
 
         .profile-info p {
             font-size: 1.2em;
             line-height: 1.6;
-            color: #ccc;
+            color: #ddd;
         }
 
-        /* Rest of the sections */
         section {
             padding: 80px 0;
             position: relative;
             margin-bottom: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
         }
 
         section h2 {
@@ -124,6 +127,7 @@
             text-transform: uppercase;
             position: relative;
             animation: fadeInUp 1s ease-in-out;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         section p {
@@ -131,6 +135,7 @@
             font-size: 1.2em;
             line-height: 1.6;
             margin-top: 20px;
+            color: #ddd;
         }
 
         ul {
@@ -154,7 +159,7 @@
         }
 
         ul li:hover {
-            background-color: #S0C6FF; /* Change to a nice blue */
+            background-color: #ff7f50;
             transform: scale(1.1);
         }
 
@@ -163,13 +168,13 @@
             padding: 20px;
             margin-bottom: 30px;
             border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
         }
 
         .project:hover {
-            transform: translateY(-5px); /* Lift up effect on hover */
+            transform: translateY(-5px);
             box-shadow: 0 25px 55px rgba(0, 0, 0, 0.3);
         }
 
@@ -178,6 +183,7 @@
             margin-bottom: 10px;
             color: #ff7f50;
             font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         .project p {
@@ -204,6 +210,19 @@
             transform: scale(1.05);
         }
 
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover .project-image {
+            transform: scale(1.05);
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -219,13 +238,15 @@
             color: #fff;
             padding: 60px 0;
             text-align: center;
-            border-top: 5px solid #ff7f50; /* Top border for the contact section */
+            border-top: 5px solid #ff7f50;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         #contact p {
             font-size: 1.2em;
             margin-top: 20px;
-            line-height: 1.8; /* Increased spacing */
+            line-height: 1.8;
+            color: #ddd;
         }
 
         #contact form {
@@ -257,7 +278,6 @@
             background-color: #ff6347;
         }
 
-        /* Social Media Icons */
         .social-icons {
             display: flex;
             justify-content: center;
@@ -292,7 +312,6 @@
     </style>
 </head>
 <body>
-    
     <header>
         <div class="container">
             <h1>Cedric Cueva</h1>
@@ -326,39 +345,88 @@
         </div>
     </section>
 
-    <!-- Projects Section (1-5) -->
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
+
             <!-- Project 1 -->
             <div class="project">
+                <div class="project-image" style="background-image: url('project1-image.jpg');"></div>
                 <h3>Project 1: History of Photography</h3>
                 <p>This website is all about exploring and learning about the History of Photography. And here we can learn from the beginning and till the modern photography.</p>
                 <a href="https://cedriccueva.github.io/Project-1/" target="_blank">View Project</a>
             </div>
+
             <!-- Project 2 -->
             <div class="project">
+                <div class="project-image" style="background-image: url('project2-image.jpg');"></div>
                 <h3>Project 2: Hobbies and Ambition</h3>
                 <p>This weblog is all about my hobbies and my ambitions. I created this because I want to be someone who can express dreams and goals and learn more about what I do.</p>
                 <a href="https://cedriccueva.github.io/Project-2/" target="_blank">View Project</a>
             </div>
+
             <!-- Project 3 -->
             <div class="project">
+                <div class="project-image" style="background-image: url('project3-image.jpg');"></div>
                 <h3>Project 3: Favorite Foods</h3>
                 <p>This weblog is all about exploring my food likings and the things that I don't like.</p>
                 <a href="https://cedriccueva.github.io/Project-3/" target="_blank">View Project</a>
             </div>
+
             <!-- Project 4 -->
             <div class="project">
+                <div class="project-image" style="background-image: url('project4-image.jpg');"></div>
                 <h3>Project 4: Declamation Speech</h3>
                 <p>This weblog is all about my declamation speech where I put my speech. And it is subject to war and to learn about a certain character.</p>
                 <a href="https://cedriccueva.github.io/Project-4/" target="_blank">View Project</a>
             </div>
+
             <!-- Project 5 -->
             <div class="project">
+                <div class="project-image" style="background-image: url('project5-image.jpg');"></div>
                 <h3>Project 5: Weather App</h3>
                 <p>A weather forecasting app built using JavaScript and the OpenWeather API.</p>
                 <a href="https://yourweatherapp.com" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project">
+                <div class="project-image" style="background-image: url('project6-image.jpg');"></div>
+                <h3>Project 6: Portfolio Site</h3>
+                <p>This is my personal portfolio site showcasing all my web development projects and skills.</p>
+                <a href="https://cedriccueva.github.io/Project-6/" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project">
+                <div class="project-image" style="background-image: url('project7-image.jpg');"></div>
+                <h3>Project 7: Task Manager</h3>
+                <p>This task manager application helps you organize and track your daily tasks effectively.</p>
+                <a href="https://cedriccueva.github.io/Project-7/" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="project">
+                <div class="project-image" style="background-image: url('project8-image.jpg');"></div>
+                <h3>Project 8: E-Commerce Website</h3>
+                <p>This is a basic e-commerce website with product pages, a shopping cart, and checkout functionality.</p>
+                <a href="https://cedriccueva.github.io/Project-8/" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="project">
+                <div class="project-image" style="background-image: url('project9-image.jpg');"></div>
+                <h3>Project 9: Blogging Platform</h3>
+                <p>A blogging platform where users can create and share their blog posts with others.</p>
+                <a href="https://cedriccueva.github.io/Project-9/" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 10 -->
+            <div class="project">
+                <div class="project-image" style="background-image: url('project10-image.jpg');"></div>
+                <h3>Project 10: Social Media Dashboard</h3>
+                <p>This dashboard displays key statistics for social media platforms like Twitter and Facebook.</p>
+                <a href="https://cedriccueva.github.io/Project-10/" target="_blank">View Project</a>
             </div>
         </div>
     </section>
@@ -374,18 +442,15 @@
                 <button type="submit">Send Message</button>
             </form>
             <div class="social-icons">
-                <a href="https://facebook.com/yourprofile" target="_blank">F</a>
-                <a href="https://twitter.com/yourprofile" target="_blank">T</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">L</a>
-                <a href="https://github.com/yourprofile" target="_blank">G</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>© 2025 Cedric Cueva. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 Cedric Cueva. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
